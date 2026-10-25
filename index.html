@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PerritoDeck — your old tablet as a Stream Deck–style control deck</title>
+  <meta name="description" content="Free, open-source app that turns an Android tablet or phone into a Stream Deck–style grid of buttons for Windows, macOS and Linux. No account, no cloud.">
+  <link rel="canonical" href="https://perritodeck.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PerritoDeck">
+  <meta property="og:url" content="https://perritodeck.dev/">
+  <meta property="og:title" content="PerritoDeck — your old tablet as a Stream Deck–style control deck">
+  <meta property="og:description" content="Free, open-source app that turns an Android tablet or phone into a Stream Deck–style grid of buttons for Windows, macOS and Linux. No account, no cloud.">
+  <meta property="og:image" content="https://perritodeck.dev/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PerritoDeck: a tablet and a phone showing grids of buttons, and the line “Your old tablet is a control deck now.”">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="paw.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="paw.svg" alt="" width="34" height="34">
+        PerritoDeck
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="features.html">Features</a>
+        <a href="plugins/">Plugins</a>
+        <a href="guide/">Guide</a>
+        <a href="faq.html">FAQ</a>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/perritodeck/perritodeck">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="pill">Pre-release · free and open source</p>
+          <h1>Your old tablet is a control deck now.</h1>
+          <p class="lede">PerritoDeck turns an Android tablet or phone into a Stream Deck–style grid of buttons for your Windows, Mac or Linux computer. Switch scenes, mute your mic, keep an eye on your servers, run anything. No account, no cloud, no subscription.</p>
+          <div class="actions">
+            <a class="button" href="features.html">See what it does</a>
+            <a class="button secondary" href="download.html">Download</a>
+          </div>
+        </div>
+        <img class="hero-art" src="img/devices-hero.webp" width="1400" height="917"
+             alt="A tablet showing a grid of streaming keys (scenes, mic level, a stream timer) and a phone showing homelab keys (server status, CPU, uptime checks)">
+      </div>
+    </section>
+
+    <section id="uses">
+      <div class="wrap">
+        <h2>One deck, whatever your desk is for</h2>
+        <div class="uses">
+          <article>
+            <img src="img/tablet-streaming.webp" width="1100" height="748" loading="lazy"
+                 alt="Streaming keys: scene buttons, a mic slider, clip and chapter keys, live bitrate and dropped frames">
+            <h3>Streaming</h3>
+            <p>Switch OBS scenes, mute the mic, save a replay, run a Twitch ad or poll. Keys show what's live, how long you've been on, and whether frames are dropping.</p>
+          </article>
+          <article>
+            <img src="img/tablet-homelab.webp" width="1100" height="748" loading="lazy"
+                 alt="Homelab keys: Proxmox guests with power state, CPU and memory, TrueNAS pool use, uptime checks with response times">
+            <h3>Homelab</h3>
+            <p>Start and stop Proxmox guests, watch TrueNAS pools and alerts, see which services answer, wake a PC on the network. Everything at a glance, one tap away.</p>
+          </article>
+          <article>
+            <img src="img/tablet-desk.webp" width="1100" height="748" loading="lazy"
+                 alt="Desk keys: media controls, a volume slider, smart lights, meeting mute and camera keys, copy and paste">
+            <h3>Desk</h3>
+            <p>Media keys and volume, the lights in your room, mute and camera hotkeys for your meeting app, and the shortcuts you use all day, typed for you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>Set up in a couple of minutes</h2>
+        <ol class="steps">
+          <li>
+            <h3>Pair</h3>
+            <p>Start PerritoDeck on your computer and Perrito on the tablet. Scan the QR code or type the six-digit code. Wi-Fi or a USB cable, your choice.</p>
+          </li>
+          <li>
+            <h3>Lay out your keys</h3>
+            <p>Drag actions onto keys in the desktop app: hotkeys, text, apps, websites, OBS, Home Assistant, plugins. The tablet updates as you edit.</p>
+          </li>
+          <li>
+            <h3>Press</h3>
+            <p>Your computer does the work and the tablet shows the result: a ✓, a new page, a live value. Profiles can switch by themselves with the app in front.</p>
+          </li>
+        </ol>
+        <picture class="shot">
+          <source srcset="img/app/buttons-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="img/app/buttons.webp" width="1600" height="1000" loading="lazy"
+               alt="The PerritoDeck desktop app's Buttons page: a tablet-shaped grid of keys, with the selected key's title, colours and OBS action on the right">
+        </picture>
+      </div>
+    </section>
+
+    <section id="try">
+      <div class="wrap try">
+        <div>
+          <h2>Have a press</h2>
+          <p>A toy version of the deck, right here in your browser. The real one lives on your tablet and runs real actions on your computer.</p>
+        </div>
+        <div>
+          <div class="tablet">
+            <div class="tablet-screen" id="deck" role="group" aria-label="Demo deck — try pressing the keys"></div>
+          </div>
+          <p class="deck-caption" id="deck-caption" aria-live="polite">Go on, press a key.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Why it's different</h2>
+        <div class="reasons">
+          <div>
+            <h3>Hardware you already own</h3>
+            <p>That tablet in the drawer has a bigger, sharper screen than most macro pads. Perrito runs on Android 5.1 and newer, Amazon Fire tablets included.</p>
+          </div>
+          <div>
+            <h3>Nothing leaves your desk</h3>
+            <p>The tablet talks only to your computer, over your own Wi-Fi or a USB cable, encrypted and paired. No sign-up, no tracking, no telemetry.</p>
+          </div>
+          <div>
+            <h3>Works with what you have</h3>
+            <p>OBS Studio and Home Assistant (experimental) are built in, 24 plugins add Twitch, Proxmox, Philips Hue, timers and more, and many plugins made for the Stream Deck run too. See <a href="compatibility.html">what's compatible</a>.</p>
+          </div>
+          <div>
+            <h3>Open all the way down</h3>
+            <p>Apache-licensed apps, MIT-licensed plugin SDKs for Python and Node.js, and a documented protocol, so anyone can build a plugin or a client of their own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="status">
+      <div class="wrap">
+        <h2>Where it stands</h2>
+        <p>PerritoDeck works end to end, but there's no published release yet. Here's the honest picture:</p>
+        <ul class="status">
+          <li><span class="tag ok">Tested</span> <span>Windows 11 with an Amazon Fire 7, on real hardware, over USB and Wi-Fi.</span></li>
+          <li><span class="tag ok">Tested</span> <span>Linux, in automated tests and cloud test runs. Android 5.1 and 14 in emulators.</span></li>
+          <li><span class="tag">Not yet</span> <span>Linux packages. The first release is for Windows and Android; on Linux, <a href="download.html#source">build it from source</a> for now.</span></li>
+          <li><span class="tag">Not yet</span> <span>macOS and the iPhone and iPad app are written, but the Mac version hasn't been tried on a real Mac, and the iPhone and iPad app hasn't been built.</span></li>
+          <li><span class="tag">Not yet</span> <span>Signed installers and store listings. Until then you can <a href="download.html#source">build it yourself</a>.</span></li>
+        </ul>
+        <div class="actions">
+          <a class="button" href="download.html">Download page</a>
+          <a class="button secondary" href="faq.html">Questions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>PerritoDeck is free and open-source software. Not affiliated with Elgato, Corsair or Bitfocus.</span>
+      <nav class="footer-nav" aria-label="More">
+        <a href="compatibility.html">Stream Deck and Companion</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/perritodeck/perritodeck">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="deck.js"></script>
+</body>
+</html>

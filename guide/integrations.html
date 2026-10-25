@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Integrations — PerritoDeck</title>
+  <meta name="description" content="Control OBS Studio and Home Assistant from PerritoDeck, or use your tablet as a Bitfocus Companion surface.">
+  <link rel="canonical" href="https://perritodeck.dev/guide/integrations">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PerritoDeck">
+  <meta property="og:url" content="https://perritodeck.dev/guide/integrations">
+  <meta property="og:title" content="Integrations — PerritoDeck">
+  <meta property="og:description" content="Control OBS Studio and Home Assistant from PerritoDeck, or use your tablet as a Bitfocus Companion surface.">
+  <meta property="og:image" content="https://perritodeck.dev/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PerritoDeck: a tablet and a phone showing grids of buttons, and the line “Your old tablet is a control deck now.”">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../paw.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <img src="../paw.svg" alt="" width="34" height="34">
+        PerritoDeck
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="../features.html">Features</a>
+        <a href="../plugins/">Plugins</a>
+        <a href="../guide/" aria-current="page">Guide</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../download.html">Download</a>
+        <a href="https://github.com/perritodeck/perritodeck">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="guide">
+    <div class="wrap">
+      <nav class="guide-nav" aria-label="User guide">
+        <p class="label">User guide</p>
+        <ol>
+          <li><a href="./">Overview</a></li>
+          <li><a href="getting-started.html">Getting started</a></li>
+          <li><a href="buttons.html">Buttons and profiles</a></li>
+          <li><a href="integrations.html" aria-current="page">Integrations</a>
+            <ul>
+              <li><a href="#setup">Setting them up</a></li>
+              <li><a href="#integrations-file">The integrations file (advanced)</a></li>
+              <li><a href="#obs">OBS Studio</a></li>
+              <li><a href="#home-assistant">Home Assistant</a></li>
+              <li><a href="#companion">Bitfocus Companion</a></li>
+              <li><a href="#ai-assistants">AI assistants</a></li>
+            </ul>
+          </li>
+          <li><a href="plugins.html">Plugins</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting and FAQ</a></li>
+        </ol>
+      </nav>
+
+      <article class="guide-body">
+<h1>Integrations</h1>
+<p class="lede">PerritoDeck can talk directly to OBS Studio and Home Assistant, it can turn your tablet into a panel for Bitfocus Companion, and AI assistants can use it if you let them.</p>
+
+<h2 id="setup">Setting them up</h2>
+<p>OBS, Home Assistant and Companion are set up in the app, under <span class="ui">Settings</span> → <strong>Integrations</strong>. Each has its own box:</p>
+<ol>
+  <li>Tick <span class="ui">Use OBS Studio</span>, <span class="ui">Use Home Assistant</span> or <span class="ui">Use Bitfocus Companion</span>, and fill in its address and password or token. The sections below say where to find them.</li>
+  <li>Click <span class="ui">Test connection</span>. It tries what you typed, before you save it, and says what it found, for example <strong>Connected to OBS 31.0.3</strong>, or what went wrong and what to check.</li>
+  <li>Click <span class="ui">Save</span>, then <span class="ui">Restart now</span>. PerritoDeck uses the new settings after it restarts.</li>
+</ol>
+<p>Saved passwords and tokens are never shown again: the box says one is saved, and typing in it replaces it. A saved one is used only with the address it was saved for (or that address moved to <code>https://</code>); if you change the address to another computer, type the password or token again.</p>
+<p>To turn one off for a while, untick it and click <span class="ui">Save</span>: its settings are kept, so you can turn it back on without typing them again (handy for Home Assistant, which shows a token only once). <span class="ui">Remove saved settings…</span> deletes them.</p>
+<p>What <span class="ui">Test connection</span> can say, and what to do about it:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>It says</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>Nothing answered at …</td><td>The program isn't running there, or its server is off (in OBS: Tools → WebSocket Server Settings). Check the address and port.</td></tr>
+    <tr><td>Nothing answered … within 5 seconds</td><td>The computer didn't answer at all: check the address, and that a firewall isn't blocking the port.</td></tr>
+    <tr><td>Can't find a computer called …</td><td>The name doesn't work on your network. Use the computer's IP address instead.</td></tr>
+    <tr><td>OBS rejected the password</td><td>Copy the password again from OBS: Tools → WebSocket Server Settings → Show Connect Info.</td></tr>
+    <tr><td>Home Assistant rejected the token</td><td>Make a new long-lived access token and paste it.</td></tr>
+    <tr><td>Something answered at …, but it isn't …</td><td>Another program uses that port. OBS uses 4455, Home Assistant 8123 and Companion 16622 unless you changed them.</td></tr>
+    <tr><td>Home Assistant's certificate isn't from an authority PerritoDeck trusts</td><td>Home Assistant uses its own (self-signed) certificate. Use its <code>http://</code> address on your network.</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="integrations-file">The integrations file (advanced)</h2>
+<p>What the form saves goes in a small text file called <code>integrations.toml</code>, in PerritoDeck's settings folder. It's kept separate from your button layouts because it holds passwords, so you can share a profile without giving away your logins. You can also edit it by hand: <span class="ui">Open the file</span> under the integrations opens it in your text editor (and makes it if it isn't there yet).</p>
+<ul>
+  <li>The file can be read only by your user account. On Windows that's you, SYSTEM and Administrators; on macOS and Linux its permissions are 600. If other accounts on the computer can read it, <span class="ui">Settings</span> says so and <span class="ui">Make it private</span> fixes it.</li>
+  <li>Saving from <span class="ui">Settings</span> keeps your notes and anything else in the file as you wrote it; it changes only the lines it needs.</li>
+  <li>PerritoDeck reads the file when it starts, so restart it after editing by hand.</li>
+  <li><code>enabled = false</code> in a section keeps its settings but leaves it off, as unticking it in <span class="ui">Settings</span> does.</li>
+</ul>
+<p>Here's a complete example. Lines starting with <code>#</code> are notes and are ignored.</p>
+<pre><code>[obs]
+url = "ws://127.0.0.1:4455"
+password = "your OBS WebSocket password"
+
+[home_assistant]
+url = "http://homeassistant.local:8123"
+token = "your long-lived access token"
+
+[companion]
+host = "127.0.0.1"
+port = 16622</code></pre>
+<div class="tip">
+  <p class="box-label">Keep it private</p>
+  <p>This file contains passwords. Don't post it online or attach it to bug reports.</p>
+</div>
+<p>If the file has a mistake, such as a misspelt name or a missing quote, PerritoDeck ignores the whole file, so OBS, Home Assistant and Companion all stay off. <span class="ui">Settings</span> → <strong>Integrations</strong> then says <strong>integrations.toml has a mistake</strong> and which line it's on, and shows the file read-only until it's fixed. Fix it in your text editor, click <span class="ui">Check again</span>, then restart PerritoDeck. Or click <span class="ui">Start over…</span>: the file is renamed to <code>integrations.toml.old</code> (which keeps your passwords, so delete it once you're set up again) and you can fill in the form from scratch.</p>
+
+<h2 id="obs">OBS Studio</h2>
+<p>Switch scenes, start and stop recording or streaming, mute your mic, and see what OBS is doing, right on the tablet. It works with OBS 28 and newer, which have remote control built in.</p>
+
+<h3 id="obs-setup">Set it up</h3>
+<ol>
+  <li>In OBS, open <strong>Tools → WebSocket Server Settings</strong> and tick <strong>Enable WebSocket server</strong>.</li>
+  <li>Click <strong>Show Connect Info</strong> to see the port (usually 4455) and the password.</li>
+  <li>In PerritoDeck, go to <span class="ui">Settings</span> → <strong>Integrations</strong>, tick <span class="ui">Use OBS Studio</span>, paste the password, and click <span class="ui">Test connection</span>, then <span class="ui">Save</span> and <span class="ui">Restart now</span>. (By hand, it's an <code>[obs]</code> section in <a href="#integrations-file">the integrations file</a>.)</li>
+</ol>
+<p>The address starts with <code>ws://</code>, not <code>wss://</code> or <code>http://</code>: OBS's WebSocket server only speaks <code>ws://</code>. Type just <code>192.168.1.20</code> and the form fills in <code>ws://</code> and the port 4455. If a saved address starts with anything else, OBS buttons say so, for example <strong>OBS: the address 127.0.0.1:4455 in Settings → Integrations must start with ws://, like ws://127.0.0.1:4455</strong>.</p>
+<p>If OBS runs on a different computer, use that computer's address instead of <code>127.0.0.1</code>, for example <code>ws://192.168.1.20:4455</code>, and allow port 4455 through its firewall.</p>
+
+<h3 id="obs-buttons">OBS buttons</h3>
+<p>In the button settings, choose <strong>OBS Studio</strong> under <strong>When pressed</strong>, then pick what to do <strong>In OBS</strong>:</p>
+<ul>
+  <li>Switch scene (type the scene's name exactly as OBS shows it)</li>
+  <li>Start or stop recording; start recording; stop recording</li>
+  <li>Start or stop streaming; start streaming; stop streaming</li>
+  <li>Mute or unmute an audio source (e.g. <code>Mic/Aux</code>)</li>
+  <li>Start or stop the replay buffer; save the replay</li>
+</ul>
+<p>In Studio Mode, Switch scene always changes the live scene (OBS's Program side), with OBS's current transition. The preview stays as it is. To set the preview instead, use the <a href="#obs-plugin">OBS Studio plugin</a>.</p>
+<p>You can also show OBS's state in titles with <code>{obs:scene}</code>, <code>{obs:recording}</code> and <code>{obs:streaming}</code>, make a <a href="buttons.html#follow">toggle that follows</a> <code>obs:recording</code> so it's red exactly while you record, and set an audio source's volume with a <a href="buttons.html#sliders">slider</a>.</p>
+<p>If OBS can't do what a button asks, the button flashes ⚠, and <span class="ui">Try it</span> on the <span class="ui">Buttons</span> page says why, for example <strong>OBS: already recording</strong> or <strong>OBS: the replay buffer is turned off (Settings → Output → Replay Buffer)</strong>. When you start a stream, PerritoDeck waits a few seconds to see that it goes live. If OBS can't connect to the streaming service, the button then flashes ⚠, and OBS shows its own message saying why. While OBS is closed, the <code>{obs:…}</code> values show <strong>–</strong>, and PerritoDeck tries to reach OBS again after 5 seconds, then waits longer each time, up to 30 seconds. Pressing an OBS button always tries straight away.</p>
+
+<h3 id="obs-plugin">Want more? The OBS Studio plugin</h3>
+<p>The built-in OBS support covers the everyday buttons. For much more, such as Studio Mode and transitions, showing or hiding sources, filters, screenshots, the virtual camera, chapter markers, stream time, dropped frames (from the network, and skipped while rendering or encoding) and a live "is this scene on air?" value, add the <strong>OBS Studio</strong> plugin from the <span class="ui">Plugins</span> page. It's set up on the Plugins page rather than in the integrations file. See <a href="plugins.html#first-party">Plugins</a>.</p>
+<p>You can use both at once: they're independent.</p>
+
+<h2 id="home-assistant">Home Assistant</h2>
+<p>Turn lights on and off, run scripts and scenes, and show sensor readings like the temperature on your buttons.</p>
+<div class="soon-box">
+  <p class="box-label">Preview</p>
+  <p>The Home Assistant integration has so far only been tested against a stand-in for Home Assistant, not a real one.</p>
+</div>
+
+<h3 id="ha-setup">Set it up</h3>
+<ol>
+  <li>In Home Assistant, click your user name at the bottom left to open your profile, then open the <strong>Security</strong> tab.</li>
+  <li>Under <strong>Long-lived access tokens</strong>, click <strong>Create token</strong>, name it "PerritoDeck" and copy the token. Home Assistant shows it only once.</li>
+  <li>In PerritoDeck, go to <span class="ui">Settings</span> → <strong>Integrations</strong>, tick <span class="ui">Use Home Assistant</span>, type its address and paste the token. Click <span class="ui">Test connection</span>, then <span class="ui">Save</span> and <span class="ui">Restart now</span>. (By hand, it's a <code>[home_assistant]</code> section in <a href="#integrations-file">the integrations file</a>.)</li>
+</ol>
+<p>Use the same address you use to open Home Assistant in your browser, such as <code>http://homeassistant.local:8123</code>. A saved token goes only to the address it was saved with, or to that same address on <code>https://</code>; for any other address the form asks you to paste it again. The OBS password works the same way. If Home Assistant answers with a redirect, Test connection says where it sends you: use that address instead.</p>
+
+<h3 id="ha-buttons">Home Assistant buttons</h3>
+<p>Choose <strong>Home Assistant</strong> under <strong>When pressed</strong> and fill in:</p>
+<ul>
+  <li><strong>Service</strong>: what to do, such as <code>light.toggle</code>, <code>switch.turn_off</code>, <code>scene.turn_on</code> or <code>script.turn_on</code>. (Newer versions of Home Assistant call these "actions"; they're the same thing.)</li>
+  <li><strong>Entity</strong> (optional): which device, such as <code>light.desk</code>. You'll find entity IDs in Home Assistant under Settings → Devices &amp; services → Entities.</li>
+  <li><strong>Extra data as JSON</strong> (optional): settings for the service, such as <code>{"brightness_pct": 40}</code> to dim a light to 40%.</li>
+</ul>
+<p>To show a reading in a title, write <code>{ha:</code> followed by the entity ID and <code>}</code>: <code>{ha:sensor.outside_temperature}</code> shows the state with its unit. For one attribute, add it after a dot: <code>{ha:light.desk.brightness}</code>.</p>
+<p>A <a href="buttons.html#sliders">slider</a> can set a light's brightness, and a <a href="buttons.html#follow">toggle can follow</a> a light, such as <code>ha:light.desk</code>, so it shows whether the light is really on.</p>
+<div class="tech">
+  <p class="box-label">Technical details</p>
+  <p>PerritoDeck uses Home Assistant's REST API with your token, calling <code>/api/services/&lt;domain&gt;/&lt;service&gt;</code> and reading <code>/api/states/&lt;entity&gt;</code>. Values are polled every 2 seconds while a button shows them. Updates pushed over Home Assistant's WebSocket API are <span class="soon">coming</span>. Another way in is the MQTT plugin, which can publish to a broker Home Assistant listens to.</p>
+</div>
+
+<h2 id="companion">Bitfocus Companion</h2>
+<p><a href="https://bitfocus.io/companion">Bitfocus Companion</a> controls broadcast and AV gear: video switchers, cameras, audio desks, lighting and thousands more. PerritoDeck can make your tablet a Companion <em>surface</em>, so Companion draws the buttons and handles the presses, just like a hardware button panel. You don't need to install anything in Companion.</p>
+<div class="soon-box">
+  <p class="box-label">Preview</p>
+  <p>Companion mode is new and so far has only been tested against a stand-in for Companion, not the real thing. If you try it, we'd love to hear how it goes.</p>
+</div>
+
+<h3 id="companion-setup">Set it up</h3>
+<ol>
+  <li>In PerritoDeck, go to <span class="ui">Settings</span> → <strong>Integrations</strong> and tick <span class="ui">Use Bitfocus Companion</span>. Leave <strong>Computer</strong> at <code>127.0.0.1</code> if Companion runs on the same computer, or type the address of the computer that runs it. 16622 is Companion's usual Satellite port for remote surfaces. Click <span class="ui">Test connection</span>, then <span class="ui">Save</span> and <span class="ui">Restart now</span>. (By hand, it's a <code>[companion]</code> section in <a href="#integrations-file">the integrations file</a>.)</li>
+  <li>On the <span class="ui">Buttons</span> page, click <span class="ui">+ Profile</span>, type a name such as "Companion", tick <span class="ui">Show Bitfocus Companion's buttons</span> and click <span class="ui">Create</span>.</li>
+  <li>Show that profile on a tablet: on the <span class="ui">Tablets</span> page, pick it in the tablet's <strong>Shows</strong> menu. (A <a href="buttons.html#switching">switching rule</a> works too.)</li>
+</ol>
+
+<h3 id="companion-surfaces">How tablets appear in Companion</h3>
+<p>Each tablet showing a Companion profile appears in Companion's <strong>Surfaces</strong> list as <strong>PerritoDeck</strong> followed by the tablet's name. Set up its buttons in Companion as you would for any surface. The surface has the same number of rows and columns as the tablet's grid, and pressing and releasing a button both reach Companion, so "on press" and "on release" actions work.</p>
+<p>When the tablet disconnects or switches to a different profile, its surface disappears from Companion, and it comes back when the tablet returns.</p>
+<p>The Buttons page shows the connection, for example <strong>Connected to Companion 3.4.0</strong> or <strong>Connecting…</strong>. While Companion can't be reached, the tablet's first button says <strong>Companion offline</strong>, and PerritoDeck keeps trying to reconnect.</p>
+<p><span class="ui">Pause keys</span> on the computer pauses Companion buttons too.</p>
+
+<h3 id="companion-limits">Not yet supported</h3>
+<ul>
+  <li>Companion's rotary encoders and LED rings; PerritoDeck sliders don't map to anything in Companion. <span class="soon">Coming</span></li>
+  <li>Putting single Companion buttons on an ordinary PerritoDeck page: a Companion profile shows only Companion's buttons. <span class="soon">Coming</span></li>
+  <li>Connecting through Companion's WebSocket port (16623). The regular port works with every Companion since version 2.</li>
+</ul>
+<div class="tech">
+  <p class="box-label">Technical details</p>
+  <p>PerritoDeck connects to Companion's Satellite API over TCP as a client. Each tablet is registered as its own device, with id <code>perritodeck-&lt;tablet id&gt;</code>, at the tablet's grid size and button resolution. Companion's button images go to the tablet as they are (PNG from Satellite API 1.12; older raw images are converted). PerritoDeck pings every 2 seconds and reconnects with backoff, from 1 up to 15 seconds.</p>
+</div>
+
+<h2 id="ai-assistants">AI assistants</h2>
+<p>AI assistants that support the Model Context Protocol (MCP), such as Claude Desktop and Claude Code, can look at your profiles, press your keys and make new ones for you: "add a key that mutes my mic", "make me a page for my video calls". It's off until you turn it on, and works only on this computer.</p>
+<ol>
+  <li>In PerritoDeck, open <span class="ui">Settings</span> → <strong>AI assistants (MCP)</strong> and tick <span class="ui">Let AI assistants use PerritoDeck</span>. It should say <strong>Running at http://127.0.0.1:46711/mcp</strong>.</li>
+  <li>Choose what assistants may do. Each is off until you tick it:
+    <ul>
+      <li><strong>Press keys</strong>: press keys already on your profiles, and switch the profile a tablet shows.</li>
+      <li><strong>Edit profiles</strong>: make, change, move and remove keys, pages and profiles. Their edits can be undone on the <span class="ui">Buttons</span> page like your own. Together with <strong>Press keys</strong>, this lets an assistant type and submit anything a keyboard can: it can make one key that types a command and another that presses Enter, then press both. Turn one of the two off if you don't want that.</li>
+      <li><strong>Run actions</strong>: run any action straight away, including programs and commands. An assistant allowed this can do anything you can do on the computer, so turn it on only for an assistant you trust, and only while you need it. Giving a key an action that runs a program or a plugin also needs this, and so does a key that types something and then confirms it (Enter, Space, or a line break or tab in its text), whether as text or one key at a time, since typing a command and pressing Enter runs it. These are the same keys PerritoDeck lists when you import a profile.</li>
+    </ul>
+    Changes apply straight away. Without any of them, an assistant can still see your profiles (including what each key does, such as its commands and web addresses), your tablets and live values.</li>
+  <li>Copy the setup for your assistant from the same section:
+    <ul>
+      <li><strong>Claude Desktop</strong>, and other apps that start a program: copy the first snippet into the app's MCP settings file (for Claude Desktop, <code>claude_desktop_config.json</code>, which its developer settings open for you), then restart the app.</li>
+      <li><strong>Claude Code</strong>: copy the <code>claude mcp add --scope user perritodeck "--" …</code> command and run it in a terminal (PowerShell, Command Prompt, Git Bash or any other). It adds PerritoDeck for every folder you use Claude Code in. The <code>"--"</code> is quoted on purpose: PowerShell drops a bare one.</li>
+      <li>Apps that connect to a web address instead: open <span class="ui">Connect by address instead</span>. These snippets contain an access token, so keep them private. <span class="ui">Make a new token</span> replaces it if it leaks.</li>
+    </ul></li>
+  <li>Ask the assistant something like "What's on my PerritoDeck?" to check it works.</li>
+</ol>
+<p>PerritoDeck must be running for the assistant to reach it. If it isn't, or the connection is turned off, the assistant gets a message saying so.</p>
+<p>An assistant set up with a command (the first two above) starts a small program, <code>perritodeck-mcp</code>, that passes its messages along, and keeps it running until the assistant closes. You may see it in Task Manager or Activity Monitor as a second PerritoDeck. It's a copy PerritoDeck keeps in its settings folder, so you can quit, update or reinstall PerritoDeck while the assistant is open: the assistant reaches it again by itself once it's running. A new token or a new port needs nothing either.</p>
+<p>Assistants set up with an earlier PerritoDeck start PerritoDeck itself with <code>mcp</code>. They still work, but while they're open PerritoDeck's own program stays in use, so on Windows updating it asks to close it. Settings says so when one connects: copy the new setup into that assistant.</p>
+<div class="tech">
+  <p class="box-label">Technical details</p>
+  <p>The server listens on <code>127.0.0.1</code> only (port 46711 by default; change it in the same section) and speaks MCP over Streamable HTTP at <code>/mcp</code>, protocol versions 2024-11-05 to 2025-11-25 and the stateless 2026-07-28. Every request needs <code>Authorization: Bearer &lt;token&gt;</code>; requests whose <code>Host</code> or <code>Origin</code> isn't this computer are refused, so web pages can't reach it, and tool calls are rate-limited. The token is in <code>mcp-token</code> in the settings folder, readable only by you.</p>
+  <p>Apps that start a program run <code>perritodeck-mcp</code> from the <code>bin</code> folder in the settings folder. It ships next to PerritoDeck's own program, and PerritoDeck copies it there when it starts if it changed. A copy an assistant is running can't be overwritten on Windows, so it's renamed aside and replaced, and deleted on a later start once nothing runs it. It has no window and no tablets of its own: it passes messages between the assistant (stdin and stdout) and the running PerritoDeck, reading the port and token from the settings folder, and again whenever the running one can't be reached or refuses the token. Every request says which version of it sent it, and PerritoDeck keeps answering every version, so a copy left over from an older PerritoDeck goes on working. <code>perritodeck-host mcp</code> and the desktop app's <code>mcp</code> argument do the same and still work. With the command-line host, turn the server on by adding <code>"mcp": {"enabled": true}</code> (and <code>"press"</code>, <code>"edit"</code> or <code>"run"</code> set to <code>true</code> as you like) to <code>app-settings.json</code> before starting it; <code>perritodeck-host mcp --config</code> prints every snippet. Any MCP client works the same way: either start that command, or connect to the address with the token.</p>
+</div>
+        <nav class="next-page" aria-label="Previous and next"><a href="buttons.html">← Buttons and profiles</a><a href="plugins.html">Plugins →</a></nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>PerritoDeck is free and open-source software. Not affiliated with Elgato, Corsair or Bitfocus.</span>
+      <nav class="footer-nav" aria-label="More">
+        <a href="../compatibility.html">Stream Deck and Companion</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/perritodeck/perritodeck">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

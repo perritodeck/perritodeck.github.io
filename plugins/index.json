@@ -1,0 +1,716 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "dev.perritodeck.audio",
+      "name": "Audio devices",
+      "version": "1.0.1",
+      "description": "Mute the microphone, change the volume, switch speakers and headsets, and set the volume of one app. Works on Windows, macOS and Linux.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.audio-1.0.1.zip",
+      "sha256": "09c8e35934987a64ec4897a51d6b079c09280848d9ecfb6670e30b8bbe1e847e",
+      "runtime": "python",
+      "actions": [
+        "Mute the microphone",
+        "Mute the sound",
+        "Volume up",
+        "Volume down",
+        "Volume",
+        "Switch speakers or headphones",
+        "Switch microphone",
+        "Volume of an app",
+        "Mute an app"
+      ],
+      "values": [
+        "Microphone muted (on/off)",
+        "Sound muted (on/off)",
+        "Volume (0–100)",
+        "Speakers or headphones in use",
+        "Microphone in use",
+        "Volume of an app (0–100) (per app)"
+      ],
+      "size": 74737
+    },
+    {
+      "id": "dev.perritodeck.clipboard",
+      "name": "Clipboard snippets",
+      "version": "1.0.1",
+      "description": "Paste a saved piece of text with one press, and keep numbered slots you can save the clipboard into and paste back later.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.clipboard-1.0.1.zip",
+      "sha256": "ea359369c3564459e18ac7c0e9aa48c60fc1ee009aacb26ea88e4745972baac1",
+      "runtime": "python",
+      "actions": [
+        "Paste text",
+        "Copy text",
+        "Save the clipboard to a slot",
+        "Paste a slot",
+        "Copy a slot"
+      ],
+      "values": [
+        "What's in a slot (first 20 characters) (per slot number)"
+      ],
+      "size": 52804
+    },
+    {
+      "id": "dev.perritodeck.clock",
+      "name": "Clocks",
+      "version": "1.0.1",
+      "description": "The time and date here or anywhere in the world, countdowns, days until a date and the week number.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.clock-1.0.1.zip",
+      "sha256": "c13f91b8ac505f9ad8944c020efebf60cdb367218523b8d8f8b2c9f140bb4474",
+      "runtime": "python",
+      "actions": [],
+      "values": [
+        "Time (here, or in a time zone) (per time zone, e.g. asia/tokyo or utc+5:30)",
+        "Date (here, or in a time zone) (per time zone, e.g. america/new_york)",
+        "Week number (per time zone, e.g. europe/berlin)",
+        "Countdown to a date and time (e.g. 12d 4h) (per date and time, e.g. 2026-12-24t18:00)",
+        "Days until a date (per date, e.g. 2026-12-24, or 12-24 for every year)"
+      ],
+      "size": 33625
+    },
+    {
+      "id": "dev.perritodeck.counter",
+      "name": "Counters",
+      "version": "1.0.1",
+      "description": "Count things with a key press: deaths on stream, laps, cups of coffee. Counts are kept, and can be written to a text file for OBS.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.counter-1.0.1.zip",
+      "sha256": "a1a71494cc0d594a5df04e2bb38e771c8a1fa4857890ed2ddd5ad03f81f5cf0e",
+      "runtime": "python",
+      "actions": [
+        "Count up",
+        "Count down",
+        "Reset to zero",
+        "Set to a number"
+      ],
+      "values": [
+        "Count (per counter name)"
+      ],
+      "size": 30467
+    },
+    {
+      "id": "dev.perritodeck.gitlab",
+      "name": "GitLab",
+      "version": "1.0.1",
+      "description": "Run, retry and watch GitLab CI/CD pipelines; count open merge requests and issues. Works with gitlab.com and your own GitLab.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.gitlab-1.0.1.zip",
+      "sha256": "026fd9b305dbd02ce2a0c425cb909e490ca268a09b69c9dd1bfcdf20be758214",
+      "runtime": "python",
+      "actions": [
+        "Run a pipeline",
+        "Retry the last failed pipeline",
+        "Cancel running pipelines",
+        "Open the latest pipeline"
+      ],
+      "values": [
+        "Latest pipeline status (per project)",
+        "Latest pipeline passed (on/off) (per project)",
+        "A pipeline is running (on/off) (per project)",
+        "Open merge requests (per project)",
+        "Open issues (per project)"
+      ],
+      "size": 42182,
+      "experimental": true,
+      "tested": "Tested against a stand-in for the GitLab API, not yet with a real GitLab."
+    },
+    {
+      "id": "dev.perritodeck.http",
+      "name": "HTTP requests",
+      "version": "1.1.1",
+      "description": "Call a web address when a key is pressed or a slider moves: webhooks, REST APIs, smart plugs.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.http-1.1.1.zip",
+      "sha256": "fd36e9fd4b854cd7646d3aac49083b57ae912c71846bcbab1269ef5eaa9e7a4b",
+      "runtime": "python",
+      "actions": [
+        "Send a request",
+        "Send the slider's value"
+      ],
+      "values": [
+        "Status of the last request"
+      ],
+      "size": 25340,
+      "experimental": true,
+      "tested": "Tested against a test server on the same computer, not yet with real web services."
+    },
+    {
+      "id": "dev.perritodeck.hue",
+      "name": "Philips Hue",
+      "version": "1.0.2",
+      "description": "Turn Hue lights and rooms on and off, dim them, change their colour and start scenes, through the Hue Bridge on your network.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.hue-1.0.2.zip",
+      "sha256": "b472b6f5eabdb1f8c6c9a060a931213addfe23c4cfadc5f9e2a85913a330efa2",
+      "runtime": "python",
+      "actions": [
+        "Pair with the bridge",
+        "Turn a light or room on or off",
+        "Set the brightness",
+        "Brighter",
+        "Dimmer",
+        "Set a colour",
+        "Set a shade of white",
+        "Start a scene"
+      ],
+      "values": [
+        "On or off (per light or room)",
+        "Brightness (0–100) (per light or room)"
+      ],
+      "size": 48660,
+      "experimental": true,
+      "tested": "Tested against a stand-in for a Hue Bridge, not yet with real Hue lights."
+    },
+    {
+      "id": "dev.perritodeck.keylight",
+      "name": "Elgato Key Light",
+      "version": "1.0.1",
+      "description": "Turn lights for Elgato Key Light, Key Light Air and Ring Light on and off, and set their brightness and shade of white, over your network.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.keylight-1.0.1.zip",
+      "sha256": "23c09abb37d5f316e63a89957f1b38e4216d3dc013b41b80cdca729d9a287de8",
+      "runtime": "python",
+      "actions": [
+        "Turn a light on or off",
+        "Set the brightness",
+        "Brighter",
+        "Dimmer",
+        "Set the shade of white",
+        "Warmer white",
+        "Cooler white"
+      ],
+      "values": [
+        "On or off (per light)",
+        "Brightness (0–100) (per light)",
+        "Shade of white (e.g. 4700 K) (per light)"
+      ],
+      "size": 39767,
+      "experimental": true,
+      "tested": "Tested against stand-in lights, not yet with a real Key Light or Light Strip."
+    },
+    {
+      "id": "dev.perritodeck.media",
+      "name": "Now playing",
+      "version": "1.1.1",
+      "description": "Show what's playing (Spotify, Music, a browser or another media player) and play, pause or skip it. Works on Windows, macOS and Linux. On Linux it needs playerctl.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.media-1.1.1.zip",
+      "sha256": "d4c5a227a9cce51b2ebb5bd5e8c9d231039c8fa03da2a066228dfdaa7a4616ac",
+      "runtime": "python",
+      "actions": [
+        "Play or pause",
+        "Next track",
+        "Previous track"
+      ],
+      "values": [
+        "Artist and title",
+        "Playing or paused"
+      ],
+      "size": 37500
+    },
+    {
+      "id": "dev.perritodeck.mqtt",
+      "name": "MQTT",
+      "version": "1.1.1",
+      "description": "Publish an MQTT message when a key is pressed or a slider moves (Mosquitto, Zigbee2MQTT, Tasmota, Home Assistant).",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.mqtt-1.1.1.zip",
+      "sha256": "6ee9608327bd3c6f242ba4271fd9367955977945e2bcaaebf839942b81aeae6d",
+      "runtime": "python",
+      "actions": [
+        "Publish a message",
+        "Publish the slider's value"
+      ],
+      "values": [],
+      "size": 26350,
+      "experimental": true,
+      "tested": "Tested against a stand-in MQTT broker, not yet with a real one such as Mosquitto."
+    },
+    {
+      "id": "dev.perritodeck.obs",
+      "name": "OBS Studio",
+      "version": "1.0.3",
+      "description": "Control OBS Studio 28 or newer: scenes, streaming, recording, audio, sources, filters, screenshots and more, with live status on your keys.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.obs-1.0.3.zip",
+      "sha256": "62eae5acecfae1938d8a03cdf53b6a343ef91636afc23115f6dc3857ee01c8ce",
+      "runtime": "python",
+      "actions": [
+        "Switch scene",
+        "Studio Mode on or off",
+        "Transition now (Studio Mode)",
+        "Choose the transition",
+        "Streaming",
+        "Recording",
+        "Split the recording into a new file",
+        "Add a chapter marker to the recording",
+        "Replay buffer",
+        "Virtual camera",
+        "Mute an audio source",
+        "Volume of an audio source",
+        "Turn a source's volume up or down",
+        "Show or hide a source",
+        "Turn a filter on or off",
+        "Save a screenshot",
+        "Press an OBS hotkey",
+        "Control a media source",
+        "Refresh a browser source",
+        "Change the text of a text source",
+        "Open a projector",
+        "Switch profile",
+        "Switch scene collection",
+        "Send a caption on the stream",
+        "Send any request (advanced)",
+        "Send any request with the slider's value (advanced)"
+      ],
+      "values": [
+        "Connected to OBS (on/off)",
+        "Live scene",
+        "Preview scene (Studio Mode)",
+        "Studio Mode (on/off)",
+        "Streaming (on/off)",
+        "Recording (on/off)",
+        "Recording paused (on/off)",
+        "Replay buffer running (on/off)",
+        "Virtual camera running (on/off)",
+        "Current transition",
+        "Current profile",
+        "Current scene collection",
+        "Streaming time (HH:MM:SS)",
+        "Recording time (HH:MM:SS)",
+        "Frames per second",
+        "OBS CPU use (%)",
+        "OBS memory use (MB)",
+        "Skipped frames, rendering and encoding (%)",
+        "Dropped frames, network (%)",
+        "Stream bitrate (kbps)",
+        "Last answer to Send any request",
+        "Scene is live (on/off) (per scene)",
+        "Scene is in the preview (on/off) (per scene)",
+        "Source is muted (on/off) (per audio source)",
+        "Source volume (0–100) (per audio source)",
+        "Source volume (dB) (per audio source)",
+        "Source is visible (on/off) (per scene/source)",
+        "Filter is on (on/off) (per source/filter)",
+        "Text of a text source (per text source)",
+        "Media is playing (on/off) (per media source)"
+      ],
+      "size": 135049
+    },
+    {
+      "id": "dev.perritodeck.ollama",
+      "name": "Ollama",
+      "version": "1.0.1",
+      "description": "Load, unload and pull local AI models in Ollama, and ask one a question from a key.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.ollama-1.0.1.zip",
+      "sha256": "37d8ca96da9c23fc4ec7e3d4109967a8b7122680a5dee00a76ff80b2fecfd764",
+      "runtime": "python",
+      "actions": [
+        "Load a model",
+        "Unload a model",
+        "Unload all models",
+        "Download a model",
+        "Ask a question"
+      ],
+      "values": [
+        "Loaded models",
+        "Number of loaded models",
+        "Graphics memory used by models (GB)",
+        "Model is loaded (on/off) (per model)",
+        "Last answer (shortened)",
+        "Download progress"
+      ],
+      "size": 38919,
+      "experimental": true,
+      "tested": "Tested against a stand-in for Ollama, not yet with a real Ollama."
+    },
+    {
+      "id": "dev.perritodeck.proxmox",
+      "name": "Proxmox VE",
+      "version": "1.0.1",
+      "description": "Start, shut down and watch Proxmox virtual machines and containers.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.proxmox-1.0.1.zip",
+      "sha256": "8b90043350e878b25899a0420a5c27ade211f6d30e5616148025a1475a97e019",
+      "runtime": "python",
+      "actions": [
+        "Start",
+        "Shut down",
+        "Stop (pull the plug)",
+        "Restart",
+        "Pause a VM",
+        "Resume a paused VM",
+        "Start or shut down",
+        "Take a snapshot"
+      ],
+      "values": [
+        "Guest status (running, stopped, paused) (per vm or container id)",
+        "Guest is running (on/off) (per vm or container id)",
+        "Guest CPU use (%) (per vm or container id)",
+        "Guest memory use (%) (per vm or container id)",
+        "Guest uptime (per vm or container id)",
+        "Guest name (per vm or container id)",
+        "Node CPU use (%) (per node name)",
+        "Node memory use (%) (per node name)",
+        "Node status (online, offline) (per node name)",
+        "Running VMs and containers"
+      ],
+      "size": 44608,
+      "experimental": true,
+      "tested": "Tested against a stand-in for the Proxmox VE API, not yet with a real server."
+    },
+    {
+      "id": "dev.perritodeck.screenshot",
+      "name": "Screenshot",
+      "version": "1.0.1",
+      "description": "Take a screenshot of the whole screen, an area you pick or the window in front, save it with the date and time in its name, and copy it to the clipboard if you like.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.screenshot-1.0.1.zip",
+      "sha256": "3661fa1dc6cd5942093d4a00a2c91b5712c553e976356fe7ad4d03a7145c6f28",
+      "runtime": "python",
+      "actions": [
+        "Take a screenshot",
+        "Open the screenshot folder"
+      ],
+      "values": [
+        "Last screenshot (file name)"
+      ],
+      "size": 48348
+    },
+    {
+      "id": "dev.perritodeck.soundboard",
+      "name": "Soundboard",
+      "version": "1.0.1",
+      "description": "Play sound files (WAV, MP3 and more) from a key, and stop them again. Uses the players your computer already has.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.soundboard-1.0.1.zip",
+      "sha256": "c015d32a4181cf9882d6315aff8e9c93212cbf83df8c602fa4e8591124bae7c6",
+      "runtime": "python",
+      "actions": [
+        "Play a sound",
+        "Stop all sounds"
+      ],
+      "values": [
+        "Is playing (on/off) (per sound file)"
+      ],
+      "size": 44642
+    },
+    {
+      "id": "dev.perritodeck.spotify",
+      "name": "Spotify",
+      "version": "1.0.2",
+      "description": "Play, pause, skip, like and change the volume in Spotify on any of your devices, and show what's playing. Uses your Spotify account; controlling playback needs Spotify Premium.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.spotify-1.0.2.zip",
+      "sha256": "206a79eabad8978f0e6e11bb13d301f0d582e18830bb3046a7ad490ba9356f2a",
+      "runtime": "python",
+      "actions": [
+        "Sign in to Spotify",
+        "Sign out of Spotify",
+        "Play or pause",
+        "Next track",
+        "Previous track",
+        "Shuffle",
+        "Repeat",
+        "Spotify volume",
+        "Volume up",
+        "Volume down",
+        "Like the current track",
+        "Play a playlist, album or track",
+        "Add the current track to a playlist",
+        "Play on another device"
+      ],
+      "values": [
+        "Track",
+        "Artist",
+        "Album",
+        "Playing (on/off)",
+        "Shuffle (on/off)",
+        "Repeat (off/all/one)",
+        "Track is liked (on/off)",
+        "Volume (0–100)",
+        "Position (1:23 / 3:45)",
+        "Device playing"
+      ],
+      "size": 60776,
+      "experimental": true,
+      "tested": "Tested against a stand-in for Spotify, not yet with the real Spotify service."
+    },
+    {
+      "id": "dev.perritodeck.sysmon",
+      "name": "System monitor",
+      "version": "1.0.1",
+      "description": "Shows CPU, memory, disk, network, GPU, temperatures, uptime and battery on keys and sliders, updated every 2 seconds.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.sysmon-1.0.1.zip",
+      "sha256": "2e91b82ce58c41fe9098fda861c4ebc1a5680719e757147ab1e902ad616a104b",
+      "runtime": "python",
+      "actions": [
+        "Open the system monitor"
+      ],
+      "values": [
+        "CPU in use (%)",
+        "Memory in use (%)",
+        "Memory in use (e.g. 11.2 GB)",
+        "Disk full (%) (per drive or folder)",
+        "Download speed (e.g. 1.4 MB/s)",
+        "Upload speed",
+        "GPU in use (%, NVIDIA)",
+        "GPU temperature (°C, NVIDIA)",
+        "GPU memory in use (%, NVIDIA)",
+        "CPU temperature (°C, Linux)",
+        "Time since start-up (e.g. 3d 4h)",
+        "Battery (%)"
+      ],
+      "size": 54889
+    },
+    {
+      "id": "dev.perritodeck.timer",
+      "name": "Timers",
+      "version": "1.0.1",
+      "description": "Countdown timers, stopwatches and a Pomodoro timer on your keys. They keep going if the app restarts.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.timer-1.0.1.zip",
+      "sha256": "f6c7316572bf3f8137334fbfad8af092204d24fefb0212b51b6d39cfa834b09e",
+      "runtime": "python",
+      "actions": [
+        "Start a countdown",
+        "Start or pause a countdown",
+        "Pause a countdown",
+        "Reset a countdown",
+        "Add or take away time",
+        "Start or stop a stopwatch",
+        "Stopwatch lap",
+        "Reset a stopwatch",
+        "Start or pause the Pomodoro",
+        "Skip to the next Pomodoro part",
+        "Reset the Pomodoro"
+      ],
+      "values": [
+        "Time left (per timer name)",
+        "Timer or stopwatch is running (on/off) (per timer name)",
+        "Timer has finished (on/off) (per timer name)",
+        "How far the timer is, 0 to 100 (per timer name)",
+        "Stopwatch time (per stopwatch name)",
+        "Last lap time (per stopwatch name)",
+        "Pomodoro: work or break",
+        "Pomodoro: time left",
+        "Pomodoro: round (e.g. 2/4)",
+        "Pomodoro is running (on/off)",
+        "Pomodoro: how far this part is, 0 to 100"
+      ],
+      "size": 47011
+    },
+    {
+      "id": "dev.perritodeck.truenas",
+      "name": "TrueNAS",
+      "version": "1.0.1",
+      "description": "Watch TrueNAS pools, alerts and apps, start and stop apps, and run scrubs and backup tasks.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.truenas-1.0.1.zip",
+      "sha256": "89c67c3fbd3ef6d9a3681cccb5a0c7e704940fb5926cf6d7c208900aa12dbaeb",
+      "runtime": "python",
+      "actions": [
+        "Start an app",
+        "Stop an app",
+        "Restart an app",
+        "Start or stop an app",
+        "Scrub a pool",
+        "Dismiss all alerts",
+        "Run a backup task"
+      ],
+      "values": [
+        "Pool health (ONLINE, DEGRADED…) (per pool name)",
+        "Pool is healthy (on/off) (per pool name)",
+        "Pool space used (%) (per pool name)",
+        "Active alerts",
+        "Worst alert level",
+        "App state (running, stopped…) (per app name)",
+        "App is running (on/off) (per app name)",
+        "CPU use (%)",
+        "CPU temperature (°C)"
+      ],
+      "size": 59427,
+      "experimental": true,
+      "tested": "Tested against a stand-in for the TrueNAS API, not yet with a real TrueNAS."
+    },
+    {
+      "id": "dev.perritodeck.twitch",
+      "name": "Twitch",
+      "version": "1.1.4",
+      "description": "Run your Twitch stream: markers, ads, clips, chat, title and category, moderation, raids, channel points, polls and predictions; show live status, viewers, followers, subs, the latest events and more.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.twitch-1.1.4.zip",
+      "sha256": "ec5bc1078f9dded0f8aa36d9eeb7b1c9e80d29052cdd0759f88f45f19cf4ce1a",
+      "runtime": "python",
+      "actions": [
+        "Sign in to Twitch",
+        "Sign out of Twitch",
+        "Add a stream marker",
+        "Make a clip",
+        "Open the last clip",
+        "Set the stream title or category",
+        "Use a stream preset",
+        "Stream tags",
+        "Content label",
+        "Branded content",
+        "Run an ad",
+        "Snooze the next ad",
+        "Send a chat message",
+        "Send a saved chat message",
+        "Chat name colour",
+        "Chat announcement",
+        "Chat mode",
+        "Shield mode",
+        "Ban or time out a user",
+        "Unban a user",
+        "Warn a user",
+        "Clear chat",
+        "Raid a channel",
+        "Cancel the raid",
+        "Shout out a channel",
+        "AutoMod level",
+        "VIP",
+        "Moderator",
+        "Create a channel points reward",
+        "Channel points reward",
+        "Complete a redemption",
+        "Start a poll",
+        "End the poll",
+        "Start a prediction",
+        "Lock the prediction",
+        "Resolve the prediction",
+        "Cancel the prediction"
+      ],
+      "values": [
+        "Live (on/off) (per channel name, or me)",
+        "Viewers (per channel name, or me)",
+        "Time live (per channel name, or me)",
+        "Stream title (per channel name, or me)",
+        "Category (per channel name, or me)",
+        "Tags (per channel name, or me)",
+        "Followers (per channel name, or me)",
+        "Subscribers (your channel) (per channel name, or me)",
+        "People in chat (where you moderate) (per channel name, or me)",
+        "Chat mode is on (on/off) (per emote, followers, slow, subscribers, unique or delay)",
+        "Time to the next ad (per channel name, or me)",
+        "Ad snoozes left (per channel name, or me)",
+        "Pre-roll free time left (per channel name, or me)",
+        "Ad playing (on/off) (per channel name, or me)",
+        "Reward is on (on/off) (per reward title)",
+        "Reward is paused (on/off) (per reward title)",
+        "Redemptions waiting (per reward title)",
+        "Poll question (per channel name, or me)",
+        "Poll: leading choice (per channel name, or me)",
+        "Poll: time left (per channel name, or me)",
+        "Prediction question (per channel name, or me)",
+        "Prediction: leading outcome (per channel name, or me)",
+        "Prediction: time left (per channel name, or me)",
+        "Latest follower (per channel name, or me)",
+        "Latest subscriber (per channel name, or me)",
+        "Latest gifted subs (per channel name, or me)",
+        "Latest cheer (per channel name, or me)",
+        "Latest raid (per channel name, or me)",
+        "Latest channel points redemption (per channel name, or me)",
+        "Hype train (per channel name, or me)",
+        "Follows since PerritoDeck started (per channel name, or me)",
+        "Subs since PerritoDeck started (per channel name, or me)",
+        "Time of the last clip made from the deck",
+        "Last stream marker (stream time)"
+      ],
+      "size": 173807,
+      "experimental": true,
+      "tested": "Tested against stand-ins for Twitch's sign-in, API and live events, not yet with real Twitch."
+    },
+    {
+      "id": "dev.perritodeck.uptime",
+      "name": "Is it up?",
+      "version": "1.0.1",
+      "description": "Shows whether your servers and web services answer: a web address, a host and port, or just a host name.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.uptime-1.0.1.zip",
+      "sha256": "06261a30d1c25a8c2101c5585f06812a0103131fd43516ee2774894e74eb0c65",
+      "runtime": "python",
+      "actions": [
+        "Check now"
+      ],
+      "values": [
+        "Is up (on/off) (per web address, host:port or host)",
+        "Response time (per web address, host:port or host)",
+        "Status (up, down or the web answer code) (per web address, host:port or host)"
+      ],
+      "size": 31628,
+      "experimental": true,
+      "tested": "Tested against test servers on the same computer, not yet with real websites and hosts."
+    },
+    {
+      "id": "dev.perritodeck.weather",
+      "name": "Weather",
+      "version": "1.0.1",
+      "description": "Current weather and today's forecast for any place, from Open-Meteo. Free, no account needed.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.weather-1.0.1.zip",
+      "sha256": "edb3dc570b40b8e8add0a3cc98bdebc622d71c25464cd45698322ad06c527b51",
+      "runtime": "python",
+      "actions": [
+        "Refresh the weather"
+      ],
+      "values": [
+        "Temperature (per place or latitude,longitude)",
+        "Feels like (per place or latitude,longitude)",
+        "Conditions (e.g. Light rain) (per place or latitude,longitude)",
+        "Weather icon (per place or latitude,longitude)",
+        "Humidity (per place or latitude,longitude)",
+        "Wind speed (per place or latitude,longitude)",
+        "Today's high (per place or latitude,longitude)",
+        "Today's low (per place or latitude,longitude)",
+        "Chance of rain today (per place or latitude,longitude)"
+      ],
+      "size": 34887,
+      "experimental": true,
+      "tested": "Tested against a stand-in for Open-Meteo, not yet with the live service."
+    },
+    {
+      "id": "dev.perritodeck.windows",
+      "name": "Windows and apps",
+      "version": "1.0.1",
+      "description": "Switch to an app (or open it), minimize, maximize, close or quit it, show the desktop, and show which app is in front. Windows, macOS and Linux (X11, Sway, Hyprland).",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.windows-1.0.1.zip",
+      "sha256": "64cb0191d95aca8fff7307518996d8e206c64ef6354d76ef2ec863701be61582",
+      "runtime": "python",
+      "actions": [
+        "Switch to an app",
+        "Minimize, maximize or close a window",
+        "Quit an app",
+        "Show the desktop"
+      ],
+      "values": [
+        "Is the app running (on/off) (per app name)",
+        "App in front"
+      ],
+      "size": 67773
+    },
+    {
+      "id": "dev.perritodeck.wol",
+      "name": "Wake-on-LAN",
+      "version": "1.0.1",
+      "description": "Switch on a computer or server on your network with a key press. Wake-on-LAN must be turned on in its BIOS or network settings.",
+      "author": "PerritoDeck contributors",
+      "url": "dev.perritodeck.wol-1.0.1.zip",
+      "sha256": "82f1c21813857f82597a62b32db788ddc03ec4152235fb0512679d3c0613acec",
+      "runtime": "python",
+      "actions": [
+        "Wake a computer"
+      ],
+      "values": [],
+      "size": 25936,
+      "experimental": true,
+      "tested": "Tested by catching the wake-up packet on the same computer, not yet by waking a real one."
+    }
+  ]
+}

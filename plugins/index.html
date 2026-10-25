@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plugins — PerritoDeck</title>
+  <meta name="description" content="Plugins that add actions and live values to PerritoDeck: OBS Studio, Home Assistant helpers, Proxmox, timers and more.">
+  <link rel="canonical" href="https://perritodeck.dev/plugins/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PerritoDeck">
+  <meta property="og:url" content="https://perritodeck.dev/plugins/">
+  <meta property="og:title" content="Plugins — PerritoDeck">
+  <meta property="og:description" content="Plugins that add actions and live values to PerritoDeck: OBS Studio, Home Assistant helpers, Proxmox, timers and more.">
+  <meta property="og:image" content="https://perritodeck.dev/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PerritoDeck: a tablet and a phone showing grids of buttons, and the line “Your old tablet is a control deck now.”">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../paw.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../catalogue.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <img src="../paw.svg" alt="" width="34" height="34">
+        PerritoDeck
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="../features.html">Features</a>
+        <a href="../plugins/" aria-current="page">Plugins</a>
+        <a href="../guide/">Guide</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../download.html">Download</a>
+        <a href="https://github.com/perritodeck/perritodeck">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="prose">
+    <div class="wrap">
+      <h1>Plugins</h1>
+      <p class="updated">Plugins add things keys can do and values their titles can show. Add them in PerritoDeck from Plugins → Look online, or download one here, unzip it and use Install from folder. They're free and open source (MIT), and they run on your computer with your permissions.</p>
+      <p class="note"><span class="tag">Experimental</span> plugins have only been tested against stand-ins for the service or device they work with, or have known problems with the real one, so they may not work as described yet.</p>
+      <div class="finder" hidden>
+        <label for="find">Find a plugin</label>
+        <input id="find" type="search" placeholder="OBS, lights, timer…" autocomplete="off">
+        <output for="find" id="found" aria-live="polite"></output>
+      </div>
+      <div class="plugins">
+      <article class="plugin" id="dev.perritodeck.audio" data-words="audio devices mute the microphone, change the volume, switch speakers and headsets, and set the volume of one app. works on windows, macos and linux. mute the microphone mute the sound volume up volume down volume switch speakers or headphones switch microphone volume of an app mute an app microphone muted (on/off) sound muted (on/off) volume (0–100) speakers or headphones in use microphone in use volume of an app (0–100) (per app)">
+        <span class="key" data-tone="1" aria-hidden="true">AD</span>
+        <div class="about">
+          <h2>Audio devices <span class="version">1.0.1</span></h2>
+          <p>Mute the microphone, change the volume, switch speakers and headsets, and set the volume of one app. Works on Windows, macOS and Linux.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Mute the microphone</li><li>Mute the sound</li><li>Volume up</li><li>Volume down</li><li>Volume</li><li>Switch speakers or headphones</li><li>Switch microphone</li><li>Volume of an app</li><li class=more>and 1 more</li></ul></div><div><h3>Titles can show</h3><ul><li>Microphone muted (on/off)</li><li>Sound muted (on/off)</li><li>Volume (0–100)</li><li>Speakers or headphones in use</li><li>Microphone in use</li><li>Volume of an app (0–100) (per app)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.audio-1.0.1.zip" download>Download (72 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 09c8e35934987a64ec4897a51d6b079c09280848d9ecfb6670e30b8bbe1e847e</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.clipboard" data-words="clipboard snippets paste a saved piece of text with one press, and keep numbered slots you can save the clipboard into and paste back later. paste text copy text save the clipboard to a slot paste a slot copy a slot what&#x27;s in a slot (first 20 characters) (per slot number)">
+        <span class="key" data-tone="2" aria-hidden="true">CS</span>
+        <div class="about">
+          <h2>Clipboard snippets <span class="version">1.0.1</span></h2>
+          <p>Paste a saved piece of text with one press, and keep numbered slots you can save the clipboard into and paste back later.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Paste text</li><li>Copy text</li><li>Save the clipboard to a slot</li><li>Paste a slot</li><li>Copy a slot</li></ul></div><div><h3>Titles can show</h3><ul><li>What&#x27;s in a slot (first 20 characters) (per slot number)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.clipboard-1.0.1.zip" download>Download (51 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 ea359369c3564459e18ac7c0e9aa48c60fc1ee009aacb26ea88e4745972baac1</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.clock" data-words="clocks the time and date here or anywhere in the world, countdowns, days until a date and the week number. time (here, or in a time zone) (per time zone, e.g. asia/tokyo or utc+5:30) date (here, or in a time zone) (per time zone, e.g. america/new_york) week number (per time zone, e.g. europe/berlin) countdown to a date and time (e.g. 12d 4h) (per date and time, e.g. 2026-12-24t18:00) days until a date (per date, e.g. 2026-12-24, or 12-24 for every year)">
+        <span class="key" data-tone="3" aria-hidden="true">C</span>
+        <div class="about">
+          <h2>Clocks <span class="version">1.0.1</span></h2>
+          <p>The time and date here or anywhere in the world, countdowns, days until a date and the week number.</p>
+          <div class="columns"><div><h3>Titles can show</h3><ul><li>Time (here, or in a time zone) (per time zone, e.g. asia/tokyo or utc+5:30)</li><li>Date (here, or in a time zone) (per time zone, e.g. america/new_york)</li><li>Week number (per time zone, e.g. europe/berlin)</li><li>Countdown to a date and time (e.g. 12d 4h) (per date and time, e.g. 2026-12-24t18:00)</li><li>Days until a date (per date, e.g. 2026-12-24, or 12-24 for every year)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.clock-1.0.1.zip" download>Download (32 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 c13f91b8ac505f9ad8944c020efebf60cdb367218523b8d8f8b2c9f140bb4474</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.counter" data-words="counters count things with a key press: deaths on stream, laps, cups of coffee. counts are kept, and can be written to a text file for obs. count up count down reset to zero set to a number count (per counter name)">
+        <span class="key" data-tone="4" aria-hidden="true">C</span>
+        <div class="about">
+          <h2>Counters <span class="version">1.0.1</span></h2>
+          <p>Count things with a key press: deaths on stream, laps, cups of coffee. Counts are kept, and can be written to a text file for OBS.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Count up</li><li>Count down</li><li>Reset to zero</li><li>Set to a number</li></ul></div><div><h3>Titles can show</h3><ul><li>Count (per counter name)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.counter-1.0.1.zip" download>Download (29 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 a1a71494cc0d594a5df04e2bb38e771c8a1fa4857890ed2ddd5ad03f81f5cf0e</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.keylight" data-words="elgato key light turn lights for elgato key light, key light air and ring light on and off, and set their brightness and shade of white, over your network. turn a light on or off set the brightness brighter dimmer set the shade of white warmer white cooler white on or off (per light) brightness (0–100) (per light) shade of white (e.g. 4700 k) (per light) experimental">
+        <span class="key" data-tone="5" aria-hidden="true">EK</span>
+        <div class="about">
+          <h2>Elgato Key Light <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Turn lights for Elgato Key Light, Key Light Air and Ring Light on and off, and set their brightness and shade of white, over your network.</p>
+          <p class="tested">Tested against stand-in lights, not yet with a real Key Light or Light Strip.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Turn a light on or off</li><li>Set the brightness</li><li>Brighter</li><li>Dimmer</li><li>Set the shade of white</li><li>Warmer white</li><li>Cooler white</li></ul></div><div><h3>Titles can show</h3><ul><li>On or off (per light)</li><li>Brightness (0–100) (per light)</li><li>Shade of white (e.g. 4700 K) (per light)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.keylight-1.0.1.zip" download>Download (38 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 23c09abb37d5f316e63a89957f1b38e4216d3dc013b41b80cdca729d9a287de8</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.gitlab" data-words="gitlab run, retry and watch gitlab ci/cd pipelines; count open merge requests and issues. works with gitlab.com and your own gitlab. run a pipeline retry the last failed pipeline cancel running pipelines open the latest pipeline latest pipeline status (per project) latest pipeline passed (on/off) (per project) a pipeline is running (on/off) (per project) open merge requests (per project) open issues (per project) experimental">
+        <span class="key" data-tone="6" aria-hidden="true">G</span>
+        <div class="about">
+          <h2>GitLab <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Run, retry and watch GitLab CI/CD pipelines; count open merge requests and issues. Works with gitlab.com and your own GitLab.</p>
+          <p class="tested">Tested against a stand-in for the GitLab API, not yet with a real GitLab.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Run a pipeline</li><li>Retry the last failed pipeline</li><li>Cancel running pipelines</li><li>Open the latest pipeline</li></ul></div><div><h3>Titles can show</h3><ul><li>Latest pipeline status (per project)</li><li>Latest pipeline passed (on/off) (per project)</li><li>A pipeline is running (on/off) (per project)</li><li>Open merge requests (per project)</li><li>Open issues (per project)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.gitlab-1.0.1.zip" download>Download (41 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 026fd9b305dbd02ce2a0c425cb909e490ca268a09b69c9dd1bfcdf20be758214</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.http" data-words="http requests call a web address when a key is pressed or a slider moves: webhooks, rest apis, smart plugs. send a request send the slider&#x27;s value status of the last request experimental">
+        <span class="key" data-tone="7" aria-hidden="true">HR</span>
+        <div class="about">
+          <h2>HTTP requests <span class="version">1.1.1</span> <span class="tag">Experimental</span></h2>
+          <p>Call a web address when a key is pressed or a slider moves: webhooks, REST APIs, smart plugs.</p>
+          <p class="tested">Tested against a test server on the same computer, not yet with real web services.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Send a request</li><li>Send the slider&#x27;s value</li></ul></div><div><h3>Titles can show</h3><ul><li>Status of the last request</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.http-1.1.1.zip" download>Download (24 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 fd36e9fd4b854cd7646d3aac49083b57ae912c71846bcbab1269ef5eaa9e7a4b</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.uptime" data-words="is it up? shows whether your servers and web services answer: a web address, a host and port, or just a host name. check now is up (on/off) (per web address, host:port or host) response time (per web address, host:port or host) status (up, down or the web answer code) (per web address, host:port or host) experimental">
+        <span class="key" data-tone="1" aria-hidden="true">II</span>
+        <div class="about">
+          <h2>Is it up? <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Shows whether your servers and web services answer: a web address, a host and port, or just a host name.</p>
+          <p class="tested">Tested against test servers on the same computer, not yet with real websites and hosts.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Check now</li></ul></div><div><h3>Titles can show</h3><ul><li>Is up (on/off) (per web address, host:port or host)</li><li>Response time (per web address, host:port or host)</li><li>Status (up, down or the web answer code) (per web address, host:port or host)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.uptime-1.0.1.zip" download>Download (30 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 06261a30d1c25a8c2101c5585f06812a0103131fd43516ee2774894e74eb0c65</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.mqtt" data-words="mqtt publish an mqtt message when a key is pressed or a slider moves (mosquitto, zigbee2mqtt, tasmota, home assistant). publish a message publish the slider&#x27;s value experimental">
+        <span class="key" data-tone="2" aria-hidden="true">M</span>
+        <div class="about">
+          <h2>MQTT <span class="version">1.1.1</span> <span class="tag">Experimental</span></h2>
+          <p>Publish an MQTT message when a key is pressed or a slider moves (Mosquitto, Zigbee2MQTT, Tasmota, Home Assistant).</p>
+          <p class="tested">Tested against a stand-in MQTT broker, not yet with a real one such as Mosquitto.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Publish a message</li><li>Publish the slider&#x27;s value</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.mqtt-1.1.1.zip" download>Download (25 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 6ee9608327bd3c6f242ba4271fd9367955977945e2bcaaebf839942b81aeae6d</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.media" data-words="now playing show what&#x27;s playing (spotify, music, a browser or another media player) and play, pause or skip it. works on windows, macos and linux. on linux it needs playerctl. play or pause next track previous track artist and title playing or paused">
+        <span class="key" data-tone="3" aria-hidden="true">NP</span>
+        <div class="about">
+          <h2>Now playing <span class="version">1.1.1</span></h2>
+          <p>Show what&#x27;s playing (Spotify, Music, a browser or another media player) and play, pause or skip it. Works on Windows, macOS and Linux. On Linux it needs playerctl.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Play or pause</li><li>Next track</li><li>Previous track</li></ul></div><div><h3>Titles can show</h3><ul><li>Artist and title</li><li>Playing or paused</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.media-1.1.1.zip" download>Download (36 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 d4c5a227a9cce51b2ebb5bd5e8c9d231039c8fa03da2a066228dfdaa7a4616ac</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.obs" data-words="obs studio control obs studio 28 or newer: scenes, streaming, recording, audio, sources, filters, screenshots and more, with live status on your keys. switch scene studio mode on or off transition now (studio mode) choose the transition streaming recording split the recording into a new file add a chapter marker to the recording replay buffer virtual camera mute an audio source volume of an audio source turn a source&#x27;s volume up or down show or hide a source turn a filter on or off save a screenshot press an obs hotkey control a media source refresh a browser source change the text of a text source open a projector switch profile switch scene collection send a caption on the stream send any request (advanced) send any request with the slider&#x27;s value (advanced) connected to obs (on/off) live scene preview scene (studio mode) studio mode (on/off) streaming (on/off) recording (on/off) recording paused (on/off) replay buffer running (on/off) virtual camera running (on/off) current transition current profile current scene collection streaming time (hh:mm:ss) recording time (hh:mm:ss) frames per second obs cpu use (%) obs memory use (mb) skipped frames, rendering and encoding (%) dropped frames, network (%) stream bitrate (kbps) last answer to send any request scene is live (on/off) (per scene) scene is in the preview (on/off) (per scene) source is muted (on/off) (per audio source) source volume (0–100) (per audio source) source volume (db) (per audio source) source is visible (on/off) (per scene/source) filter is on (on/off) (per source/filter) text of a text source (per text source) media is playing (on/off) (per media source)">
+        <span class="key" data-tone="4" aria-hidden="true">OS</span>
+        <div class="about">
+          <h2>OBS Studio <span class="version">1.0.3</span></h2>
+          <p>Control OBS Studio 28 or newer: scenes, streaming, recording, audio, sources, filters, screenshots and more, with live status on your keys.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Switch scene</li><li>Studio Mode on or off</li><li>Transition now (Studio Mode)</li><li>Choose the transition</li><li>Streaming</li><li>Recording</li><li>Split the recording into a new file</li><li>Add a chapter marker to the recording</li><li class=more>and 18 more</li></ul></div><div><h3>Titles can show</h3><ul><li>Connected to OBS (on/off)</li><li>Live scene</li><li>Preview scene (Studio Mode)</li><li>Studio Mode (on/off)</li><li>Streaming (on/off)</li><li>Recording (on/off)</li><li>Recording paused (on/off)</li><li>Replay buffer running (on/off)</li><li class=more>and 22 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.obs-1.0.3.zip" download>Download (131 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 62eae5acecfae1938d8a03cdf53b6a343ef91636afc23115f6dc3857ee01c8ce</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.ollama" data-words="ollama load, unload and pull local ai models in ollama, and ask one a question from a key. load a model unload a model unload all models download a model ask a question loaded models number of loaded models graphics memory used by models (gb) model is loaded (on/off) (per model) last answer (shortened) download progress experimental">
+        <span class="key" data-tone="5" aria-hidden="true">O</span>
+        <div class="about">
+          <h2>Ollama <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Load, unload and pull local AI models in Ollama, and ask one a question from a key.</p>
+          <p class="tested">Tested against a stand-in for Ollama, not yet with a real Ollama.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Load a model</li><li>Unload a model</li><li>Unload all models</li><li>Download a model</li><li>Ask a question</li></ul></div><div><h3>Titles can show</h3><ul><li>Loaded models</li><li>Number of loaded models</li><li>Graphics memory used by models (GB)</li><li>Model is loaded (on/off) (per model)</li><li>Last answer (shortened)</li><li>Download progress</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.ollama-1.0.1.zip" download>Download (38 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 37d8ca96da9c23fc4ec7e3d4109967a8b7122680a5dee00a76ff80b2fecfd764</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.hue" data-words="philips hue turn hue lights and rooms on and off, dim them, change their colour and start scenes, through the hue bridge on your network. pair with the bridge turn a light or room on or off set the brightness brighter dimmer set a colour set a shade of white start a scene on or off (per light or room) brightness (0–100) (per light or room) experimental">
+        <span class="key" data-tone="6" aria-hidden="true">PH</span>
+        <div class="about">
+          <h2>Philips Hue <span class="version">1.0.2</span> <span class="tag">Experimental</span></h2>
+          <p>Turn Hue lights and rooms on and off, dim them, change their colour and start scenes, through the Hue Bridge on your network.</p>
+          <p class="tested">Tested against a stand-in for a Hue Bridge, not yet with real Hue lights.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Pair with the bridge</li><li>Turn a light or room on or off</li><li>Set the brightness</li><li>Brighter</li><li>Dimmer</li><li>Set a colour</li><li>Set a shade of white</li><li>Start a scene</li></ul></div><div><h3>Titles can show</h3><ul><li>On or off (per light or room)</li><li>Brightness (0–100) (per light or room)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.hue-1.0.2.zip" download>Download (47 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 b472b6f5eabdb1f8c6c9a060a931213addfe23c4cfadc5f9e2a85913a330efa2</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.proxmox" data-words="proxmox ve start, shut down and watch proxmox virtual machines and containers. start shut down stop (pull the plug) restart pause a vm resume a paused vm start or shut down take a snapshot guest status (running, stopped, paused) (per vm or container id) guest is running (on/off) (per vm or container id) guest cpu use (%) (per vm or container id) guest memory use (%) (per vm or container id) guest uptime (per vm or container id) guest name (per vm or container id) node cpu use (%) (per node name) node memory use (%) (per node name) node status (online, offline) (per node name) running vms and containers experimental">
+        <span class="key" data-tone="7" aria-hidden="true">PV</span>
+        <div class="about">
+          <h2>Proxmox VE <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Start, shut down and watch Proxmox virtual machines and containers.</p>
+          <p class="tested">Tested against a stand-in for the Proxmox VE API, not yet with a real server.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Start</li><li>Shut down</li><li>Stop (pull the plug)</li><li>Restart</li><li>Pause a VM</li><li>Resume a paused VM</li><li>Start or shut down</li><li>Take a snapshot</li></ul></div><div><h3>Titles can show</h3><ul><li>Guest status (running, stopped, paused) (per vm or container id)</li><li>Guest is running (on/off) (per vm or container id)</li><li>Guest CPU use (%) (per vm or container id)</li><li>Guest memory use (%) (per vm or container id)</li><li>Guest uptime (per vm or container id)</li><li>Guest name (per vm or container id)</li><li>Node CPU use (%) (per node name)</li><li>Node memory use (%) (per node name)</li><li class=more>and 2 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.proxmox-1.0.1.zip" download>Download (43 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 8b90043350e878b25899a0420a5c27ade211f6d30e5616148025a1475a97e019</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.screenshot" data-words="screenshot take a screenshot of the whole screen, an area you pick or the window in front, save it with the date and time in its name, and copy it to the clipboard if you like. take a screenshot open the screenshot folder last screenshot (file name)">
+        <span class="key" data-tone="1" aria-hidden="true">S</span>
+        <div class="about">
+          <h2>Screenshot <span class="version">1.0.1</span></h2>
+          <p>Take a screenshot of the whole screen, an area you pick or the window in front, save it with the date and time in its name, and copy it to the clipboard if you like.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Take a screenshot</li><li>Open the screenshot folder</li></ul></div><div><h3>Titles can show</h3><ul><li>Last screenshot (file name)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.screenshot-1.0.1.zip" download>Download (47 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 3661fa1dc6cd5942093d4a00a2c91b5712c553e976356fe7ad4d03a7145c6f28</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.soundboard" data-words="soundboard play sound files (wav, mp3 and more) from a key, and stop them again. uses the players your computer already has. play a sound stop all sounds is playing (on/off) (per sound file)">
+        <span class="key" data-tone="2" aria-hidden="true">S</span>
+        <div class="about">
+          <h2>Soundboard <span class="version">1.0.1</span></h2>
+          <p>Play sound files (WAV, MP3 and more) from a key, and stop them again. Uses the players your computer already has.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Play a sound</li><li>Stop all sounds</li></ul></div><div><h3>Titles can show</h3><ul><li>Is playing (on/off) (per sound file)</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.soundboard-1.0.1.zip" download>Download (43 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 c015d32a4181cf9882d6315aff8e9c93212cbf83df8c602fa4e8591124bae7c6</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.spotify" data-words="spotify play, pause, skip, like and change the volume in spotify on any of your devices, and show what&#x27;s playing. uses your spotify account; controlling playback needs spotify premium. sign in to spotify sign out of spotify play or pause next track previous track shuffle repeat spotify volume volume up volume down like the current track play a playlist, album or track add the current track to a playlist play on another device track artist album playing (on/off) shuffle (on/off) repeat (off/all/one) track is liked (on/off) volume (0–100) position (1:23 / 3:45) device playing experimental">
+        <span class="key" data-tone="3" aria-hidden="true">S</span>
+        <div class="about">
+          <h2>Spotify <span class="version">1.0.2</span> <span class="tag">Experimental</span></h2>
+          <p>Play, pause, skip, like and change the volume in Spotify on any of your devices, and show what&#x27;s playing. Uses your Spotify account; controlling playback needs Spotify Premium.</p>
+          <p class="tested">Tested against a stand-in for Spotify, not yet with the real Spotify service.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Sign in to Spotify</li><li>Sign out of Spotify</li><li>Play or pause</li><li>Next track</li><li>Previous track</li><li>Shuffle</li><li>Repeat</li><li>Spotify volume</li><li class=more>and 6 more</li></ul></div><div><h3>Titles can show</h3><ul><li>Track</li><li>Artist</li><li>Album</li><li>Playing (on/off)</li><li>Shuffle (on/off)</li><li>Repeat (off/all/one)</li><li>Track is liked (on/off)</li><li>Volume (0–100)</li><li class=more>and 2 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.spotify-1.0.2.zip" download>Download (59 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 206a79eabad8978f0e6e11bb13d301f0d582e18830bb3046a7ad490ba9356f2a</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.sysmon" data-words="system monitor shows cpu, memory, disk, network, gpu, temperatures, uptime and battery on keys and sliders, updated every 2 seconds. open the system monitor cpu in use (%) memory in use (%) memory in use (e.g. 11.2 gb) disk full (%) (per drive or folder) download speed (e.g. 1.4 mb/s) upload speed gpu in use (%, nvidia) gpu temperature (°c, nvidia) gpu memory in use (%, nvidia) cpu temperature (°c, linux) time since start-up (e.g. 3d 4h) battery (%)">
+        <span class="key" data-tone="4" aria-hidden="true">SM</span>
+        <div class="about">
+          <h2>System monitor <span class="version">1.0.1</span></h2>
+          <p>Shows CPU, memory, disk, network, GPU, temperatures, uptime and battery on keys and sliders, updated every 2 seconds.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Open the system monitor</li></ul></div><div><h3>Titles can show</h3><ul><li>CPU in use (%)</li><li>Memory in use (%)</li><li>Memory in use (e.g. 11.2 GB)</li><li>Disk full (%) (per drive or folder)</li><li>Download speed (e.g. 1.4 MB/s)</li><li>Upload speed</li><li>GPU in use (%, NVIDIA)</li><li>GPU temperature (°C, NVIDIA)</li><li class=more>and 4 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.sysmon-1.0.1.zip" download>Download (53 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 2e91b82ce58c41fe9098fda861c4ebc1a5680719e757147ab1e902ad616a104b</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.timer" data-words="timers countdown timers, stopwatches and a pomodoro timer on your keys. they keep going if the app restarts. start a countdown start or pause a countdown pause a countdown reset a countdown add or take away time start or stop a stopwatch stopwatch lap reset a stopwatch start or pause the pomodoro skip to the next pomodoro part reset the pomodoro time left (per timer name) timer or stopwatch is running (on/off) (per timer name) timer has finished (on/off) (per timer name) how far the timer is, 0 to 100 (per timer name) stopwatch time (per stopwatch name) last lap time (per stopwatch name) pomodoro: work or break pomodoro: time left pomodoro: round (e.g. 2/4) pomodoro is running (on/off) pomodoro: how far this part is, 0 to 100">
+        <span class="key" data-tone="5" aria-hidden="true">T</span>
+        <div class="about">
+          <h2>Timers <span class="version">1.0.1</span></h2>
+          <p>Countdown timers, stopwatches and a Pomodoro timer on your keys. They keep going if the app restarts.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Start a countdown</li><li>Start or pause a countdown</li><li>Pause a countdown</li><li>Reset a countdown</li><li>Add or take away time</li><li>Start or stop a stopwatch</li><li>Stopwatch lap</li><li>Reset a stopwatch</li><li class=more>and 3 more</li></ul></div><div><h3>Titles can show</h3><ul><li>Time left (per timer name)</li><li>Timer or stopwatch is running (on/off) (per timer name)</li><li>Timer has finished (on/off) (per timer name)</li><li>How far the timer is, 0 to 100 (per timer name)</li><li>Stopwatch time (per stopwatch name)</li><li>Last lap time (per stopwatch name)</li><li>Pomodoro: work or break</li><li>Pomodoro: time left</li><li class=more>and 3 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.timer-1.0.1.zip" download>Download (45 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 f6c7316572bf3f8137334fbfad8af092204d24fefb0212b51b6d39cfa834b09e</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.truenas" data-words="truenas watch truenas pools, alerts and apps, start and stop apps, and run scrubs and backup tasks. start an app stop an app restart an app start or stop an app scrub a pool dismiss all alerts run a backup task pool health (online, degraded…) (per pool name) pool is healthy (on/off) (per pool name) pool space used (%) (per pool name) active alerts worst alert level app state (running, stopped…) (per app name) app is running (on/off) (per app name) cpu use (%) cpu temperature (°c) experimental">
+        <span class="key" data-tone="6" aria-hidden="true">T</span>
+        <div class="about">
+          <h2>TrueNAS <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Watch TrueNAS pools, alerts and apps, start and stop apps, and run scrubs and backup tasks.</p>
+          <p class="tested">Tested against a stand-in for the TrueNAS API, not yet with a real TrueNAS.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Start an app</li><li>Stop an app</li><li>Restart an app</li><li>Start or stop an app</li><li>Scrub a pool</li><li>Dismiss all alerts</li><li>Run a backup task</li></ul></div><div><h3>Titles can show</h3><ul><li>Pool health (ONLINE, DEGRADED…) (per pool name)</li><li>Pool is healthy (on/off) (per pool name)</li><li>Pool space used (%) (per pool name)</li><li>Active alerts</li><li>Worst alert level</li><li>App state (running, stopped…) (per app name)</li><li>App is running (on/off) (per app name)</li><li>CPU use (%)</li><li class=more>and 1 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.truenas-1.0.1.zip" download>Download (58 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 89c67c3fbd3ef6d9a3681cccb5a0c7e704940fb5926cf6d7c208900aa12dbaeb</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.twitch" data-words="twitch run your twitch stream: markers, ads, clips, chat, title and category, moderation, raids, channel points, polls and predictions; show live status, viewers, followers, subs, the latest events and more. sign in to twitch sign out of twitch add a stream marker make a clip open the last clip set the stream title or category use a stream preset stream tags content label branded content run an ad snooze the next ad send a chat message send a saved chat message chat name colour chat announcement chat mode shield mode ban or time out a user unban a user warn a user clear chat raid a channel cancel the raid shout out a channel automod level vip moderator create a channel points reward channel points reward complete a redemption start a poll end the poll start a prediction lock the prediction resolve the prediction cancel the prediction live (on/off) (per channel name, or me) viewers (per channel name, or me) time live (per channel name, or me) stream title (per channel name, or me) category (per channel name, or me) tags (per channel name, or me) followers (per channel name, or me) subscribers (your channel) (per channel name, or me) people in chat (where you moderate) (per channel name, or me) chat mode is on (on/off) (per emote, followers, slow, subscribers, unique or delay) time to the next ad (per channel name, or me) ad snoozes left (per channel name, or me) pre-roll free time left (per channel name, or me) ad playing (on/off) (per channel name, or me) reward is on (on/off) (per reward title) reward is paused (on/off) (per reward title) redemptions waiting (per reward title) poll question (per channel name, or me) poll: leading choice (per channel name, or me) poll: time left (per channel name, or me) prediction question (per channel name, or me) prediction: leading outcome (per channel name, or me) prediction: time left (per channel name, or me) latest follower (per channel name, or me) latest subscriber (per channel name, or me) latest gifted subs (per channel name, or me) latest cheer (per channel name, or me) latest raid (per channel name, or me) latest channel points redemption (per channel name, or me) hype train (per channel name, or me) follows since perritodeck started (per channel name, or me) subs since perritodeck started (per channel name, or me) time of the last clip made from the deck last stream marker (stream time) experimental">
+        <span class="key" data-tone="7" aria-hidden="true">T</span>
+        <div class="about">
+          <h2>Twitch <span class="version">1.1.4</span> <span class="tag">Experimental</span></h2>
+          <p>Run your Twitch stream: markers, ads, clips, chat, title and category, moderation, raids, channel points, polls and predictions; show live status, viewers, followers, subs, the latest events and more.</p>
+          <p class="tested">Tested against stand-ins for Twitch&#x27;s sign-in, API and live events, not yet with real Twitch.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Sign in to Twitch</li><li>Sign out of Twitch</li><li>Add a stream marker</li><li>Make a clip</li><li>Open the last clip</li><li>Set the stream title or category</li><li>Use a stream preset</li><li>Stream tags</li><li class=more>and 29 more</li></ul></div><div><h3>Titles can show</h3><ul><li>Live (on/off) (per channel name, or me)</li><li>Viewers (per channel name, or me)</li><li>Time live (per channel name, or me)</li><li>Stream title (per channel name, or me)</li><li>Category (per channel name, or me)</li><li>Tags (per channel name, or me)</li><li>Followers (per channel name, or me)</li><li>Subscribers (your channel) (per channel name, or me)</li><li class=more>and 26 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.twitch-1.1.4.zip" download>Download (169 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 ec5bc1078f9dded0f8aa36d9eeb7b1c9e80d29052cdd0759f88f45f19cf4ce1a</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.wol" data-words="wake-on-lan switch on a computer or server on your network with a key press. wake-on-lan must be turned on in its bios or network settings. wake a computer experimental">
+        <span class="key" data-tone="1" aria-hidden="true">W</span>
+        <div class="about">
+          <h2>Wake-on-LAN <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Switch on a computer or server on your network with a key press. Wake-on-LAN must be turned on in its BIOS or network settings.</p>
+          <p class="tested">Tested by catching the wake-up packet on the same computer, not yet by waking a real one.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Wake a computer</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.wol-1.0.1.zip" download>Download (25 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 82f1c21813857f82597a62b32db788ddc03ec4152235fb0512679d3c0613acec</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.weather" data-words="weather current weather and today&#x27;s forecast for any place, from open-meteo. free, no account needed. refresh the weather temperature (per place or latitude,longitude) feels like (per place or latitude,longitude) conditions (e.g. light rain) (per place or latitude,longitude) weather icon (per place or latitude,longitude) humidity (per place or latitude,longitude) wind speed (per place or latitude,longitude) today&#x27;s high (per place or latitude,longitude) today&#x27;s low (per place or latitude,longitude) chance of rain today (per place or latitude,longitude) experimental">
+        <span class="key" data-tone="2" aria-hidden="true">W</span>
+        <div class="about">
+          <h2>Weather <span class="version">1.0.1</span> <span class="tag">Experimental</span></h2>
+          <p>Current weather and today&#x27;s forecast for any place, from Open-Meteo. Free, no account needed.</p>
+          <p class="tested">Tested against a stand-in for Open-Meteo, not yet with the live service.</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Refresh the weather</li></ul></div><div><h3>Titles can show</h3><ul><li>Temperature (per place or latitude,longitude)</li><li>Feels like (per place or latitude,longitude)</li><li>Conditions (e.g. Light rain) (per place or latitude,longitude)</li><li>Weather icon (per place or latitude,longitude)</li><li>Humidity (per place or latitude,longitude)</li><li>Wind speed (per place or latitude,longitude)</li><li>Today&#x27;s high (per place or latitude,longitude)</li><li>Today&#x27;s low (per place or latitude,longitude)</li><li class=more>and 1 more</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.weather-1.0.1.zip" download>Download (34 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 edb3dc570b40b8e8add0a3cc98bdebc622d71c25464cd45698322ad06c527b51</span></p>
+        </div>
+      </article>
+      <article class="plugin" id="dev.perritodeck.windows" data-words="windows and apps switch to an app (or open it), minimize, maximize, close or quit it, show the desktop, and show which app is in front. windows, macos and linux (x11, sway, hyprland). switch to an app minimize, maximize or close a window quit an app show the desktop is the app running (on/off) (per app name) app in front">
+        <span class="key" data-tone="3" aria-hidden="true">WA</span>
+        <div class="about">
+          <h2>Windows and apps <span class="version">1.0.1</span></h2>
+          <p>Switch to an app (or open it), minimize, maximize, close or quit it, show the desktop, and show which app is in front. Windows, macOS and Linux (X11, Sway, Hyprland).</p>
+          <div class="columns"><div><h3>Keys can</h3><ul><li>Switch to an app</li><li>Minimize, maximize or close a window</li><li>Quit an app</li><li>Show the desktop</li></ul></div><div><h3>Titles can show</h3><ul><li>Is the app running (on/off) (per app name)</li><li>App in front</li></ul></div></div>
+          <p class="get"><a href="dev.perritodeck.windows-1.0.1.zip" download>Download (66 KB)</a>
+            · needs Python 3
+            <br><span class="sha" title="SHA-256">SHA-256 64cb0191d95aca8fff7307518996d8e206c64ef6354d76ef2ec863701be61582</span></p>
+        </div>
+      </article>
+        <p class="none" id="none" hidden>No plugin matches that. Try another word, or <a href="../guide/plugins.html#write-your-own">write your own</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>PerritoDeck is free and open-source software. Not affiliated with Elgato, Corsair or Bitfocus.</span>
+      <nav class="footer-nav" aria-label="More">
+        <a href="../compatibility.html">Stream Deck and Companion</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/perritodeck/perritodeck">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- The search box: website/catalogue.js, a committed file, because this folder is generated. -->
+  <script src="../catalogue.js"></script>
+</body>
+</html>
